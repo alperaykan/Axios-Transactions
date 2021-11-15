@@ -3,9 +3,16 @@ import './App.css';
 
 function App() {
   return (
-    <><div>
+    <>
+    <div>
    {/* <PostList></PostList> */}
- </div><div><PostForm></PostForm></div></>
+ </div>
+    <div>
+      {/*<PostForm></PostForm>*/}
+    {/*Eğer component children almıyorsa aşağıdaki gibi kullanım daha doğrudur.*/}
+      <PostForm />
+    </div>
+    </>
 );
 }
 
