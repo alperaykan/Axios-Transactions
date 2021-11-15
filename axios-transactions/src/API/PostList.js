@@ -14,10 +14,14 @@ class PostList extends Component {
     // get request yapıldı
     componentDidMount(){
         axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
-            this.setState({
+            //response boş dönerse exception'a düşecektir şöyle yapılabilir
+            if(!!response?.data) {
+                this.setState({
                 posts: response.data
             })
             console.log(response.data)
+            }
+         //*-******************************
         })
     }
 
